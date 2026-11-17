@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Yuning Wang is a PhD candidate in aerospace engineering at the University of Michigan studying turbulence, active flow control, and machine learning.">
+  <meta name="theme-color" content="#f8f7f4">
+  <title>Yuning Wang | Aerospace Engineering</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="masthead wrap">
+    <a class="monogram" href="#top" aria-label="Yuning Wang, home">YW<span aria-hidden="true">.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main id="main">
+    <div class="hero wrap">
+      <div class="intro">
+        <p class="eyebrow"><span class="rule"></span> Aerospace engineering</p>
+        <h1>Yuning Wang</h1>
+        <p class="position">PhD candidate · University of Michigan</p>
+        <p class="bio">I study how to reduce aerodynamic drag by controlling turbulence. In <a href="https://www.vinuesalab.com/lab-members/">Ricardo Vinuesa’s group</a>, I use high-fidelity simulations to understand what a controller can learn in a simple channel and carry over to a wing.</p>
+        <div class="profile-links">
+          <a href="https://scholar.google.com/citations?user=n0DYwYgAAAAJ">Google Scholar</a>
+          <a href="https://github.com/Fantasy98">GitHub</a>
+          <a href="mailto:yuninw@umich.edu">Email</a>
+        </div>
+      </div>
+      <figure class="research-figure">
+        <a class="figure-link" href="assets/channel-to-wing.webp" aria-label="Open the full-size wing and channel simulation figure">
+          <img src="assets/channel-to-wing.webp" width="1700" height="937" alt="Turbulent structures over a NACA4412 wing. A marked patch on the suction side connects to a box showing similar structures in a channel simulation.">
+        </a>
+        <figcaption><strong>From a channel to a wing</strong>Near-wall turbulence in the two simulations. <a href="https://arxiv.org/abs/2604.09434">Wang et al., 2026</a></figcaption>
+      </figure>
+    </div>
+    <section id="research" class="section wrap">
+      <h2>Research</h2>
+      <div class="research-copy">
+        <article>
+          <h3>Can a controller trained in a channel reduce drag on a wing?</h3>
+          <p>Training a reinforcement learning controller directly on a wing requires many expensive flow simulations. We trained controllers in smaller channels chosen to reproduce the boundary layer at different locations along the wing. When applied to the NACA4412 without further training, the controllers reduced drag.</p>
+          <a class="text-link" href="https://arxiv.org/abs/2604.09434">Read the preprint <span aria-hidden="true">↗</span></a>
+        </article>
+        <article>
+          <h3>HydroGym</h3>
+          <p>How well does a flow-control strategy carry over to a new geometry or flow speed? We developed HydroGym so researchers can compare reinforcement learning algorithms across more than 60 validated flow simulations, from laminar cylinder wakes to turbulent wing boundary layers.</p>
+          <a class="text-link" href="https://doi.org/10.1038/s41586-026-10917-6">Read the Nature paper <span aria-hidden="true">↗</span></a>
+        </article>
+        <article>
+          <h3>Controlling the flow around vehicles</h3>
+          <p>At the GM Technical Center, I’ve explored how reinforcement learning can guide active flow control to reduce vehicle drag. This work extends my interest in turbulence control to the separated wake behind a vehicle.</p>
+        </article>
+      </div>
+    </section>
+    <section id="publications" class="section wrap">
+      <div class="section-heading">
+        <h2>Selected publications</h2>
+        <a class="subtle-link" href="https://orcid.org/0009-0009-9964-7595">All works on ORCID <span aria-hidden="true">↗</span></a>
+      </div>
+      <ol class="papers">
+        <li id="hydrogym">
+          <span class="year">2026</span>
+          <div>
+            <p class="venue">Nature · 657, 369–376</p>
+            <h3><a href="https://doi.org/10.1038/s41586-026-10917-6">The HydroGym reinforcement learning platform for fluid dynamics</a></h3>
+            <p class="authors">C. Lagemann, S. Mokbel, M. Gondrum, M. Rüttgers, <b>Y. Wang</b>, et al.</p>
+            <p class="finding">In a wing simulation, a controller trained in a simpler flow reduced local skin friction by 38% without further training on the wing.</p>
+          </div>
+        </li>
+        <li>
+          <span class="year">2025</span>
+          <div>
+            <p class="venue">International Journal of Heat and Fluid Flow</p>
+            <h3><a href="https://doi.org/10.1016/j.ijheatfluidflow.2025.109900">Separation control applied to the turbulent flow around a NACA4412 wing section</a></h3>
+            <p class="authors"><b>Y. Wang</b>, F. Mallor, C. Guardiola, R. Mariani, and R. Vinuesa</p>
+            <p class="finding">Steady blowing and suction delayed separation and increased lift by up to 11%, with only a small gain in aerodynamic efficiency.</p>
+          </div>
+        </li>
+        <li>
+          <span class="year">2025</span>
+          <div>
+            <p class="venue">Journal of Fluid Mechanics</p>
+            <h3><a href="https://doi.org/10.1017/jfm.2025.338">Opposition control applied to turbulent wing sections</a></h3>
+            <p class="authors"><b>Y. Wang</b>, M. Atzori, and R. Vinuesa</p>
+            <p class="finding">Comparing two wing sections showed how a stronger adverse pressure gradient limits the skin-friction reduction achievable with opposition control.</p>
+          </div>
+        </li>
+        <li>
+          <span class="year">2024</span>
+          <div>
+            <p class="venue">Nature Communications</p>
+            <h3><a href="https://doi.org/10.1038/s41467-024-45578-4">β-Variational autoencoders and transformers for reduced-order modelling of fluid flows</a></h3>
+            <p class="authors">A. Solera-Rico, C. Sanmiguel Vila, M. Gómez-López, <b>Y. Wang</b>, A. Almashjary, S. T. M. Dawson, and R. Vinuesa</p>
+            <p class="finding">An autoencoder compressed velocity fields into a few interpretable variables. A transformer then predicted how those variables evolved over time.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+  </main>
+  <footer id="contact" class="footer">
+    <div class="section wrap">
+      <h2>Contact</h2>
+      <div>
+        <a class="email" href="mailto:yuninw@umich.edu">yuninw@umich.edu</a>
+        <p>Department of Aerospace Engineering<br>University of Michigan · Ann Arbor</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
