@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Yuning Wang is a PhD candidate in aerospace engineering at the University of Michigan studying turbulence, active flow control, and machine learning.">
-  <meta name="theme-color" content="#f8f7f4">
+  <meta name="theme-color" content="#f8f7f2">
   <title>Yuning Wang | Aerospace Engineering</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -19,47 +19,68 @@
     </nav>
   </header>
   <main id="main">
-    <div class="hero wrap">
+    <section class="hero wrap" aria-labelledby="name">
       <div class="intro">
-        <p class="eyebrow"><span class="rule"></span> Aerospace engineering</p>
-        <h1>Yuning Wang</h1>
-        <p class="position">PhD candidate · University of Michigan</p>
-        <p class="bio">I study how to reduce aerodynamic drag by controlling turbulence. In <a href="https://www.vinuesalab.com/lab-members/">Ricardo Vinuesa’s group</a>, I use high-fidelity simulations to understand what a controller can learn in a simple channel and carry over to a wing.</p>
+        <div class="identity">
+          <h1 id="name">Yuning <em>Wang</em></h1>
+          <img class="portrait" src="assets/yuning-wang.webp" width="480" height="640" alt="Yuning Wang outdoors by a lake">
+        </div>
+        <p class="position">PhD candidate in Aerospace Engineering<br>University of Michigan, Ann Arbor</p>
+        <p class="bio">I study how to reduce drag by controlling turbulence. In <a href="https://www.vinuesalab.com/lab-members/">Ricardo Vinuesa’s group</a>, I use flow simulations to test what a controller trained in a channel can carry over to a wing.</p>
         <div class="profile-links">
           <a href="https://scholar.google.com/citations?user=n0DYwYgAAAAJ">Google Scholar</a>
           <a href="https://github.com/Fantasy98">GitHub</a>
           <a href="mailto:yuninw@umich.edu">Email</a>
         </div>
       </div>
-      <figure class="research-figure">
-        <a class="figure-link" href="assets/channel-to-wing.webp" aria-label="Open the full-size wing and channel simulation figure">
-          <img src="assets/channel-to-wing.webp" width="1700" height="937" alt="Turbulent structures over a NACA4412 wing. A marked patch on the suction side connects to a box showing similar structures in a channel simulation.">
+      <aside class="plate" aria-labelledby="wing-title">
+        <div class="plate-heading">
+          <h2 id="wing-title">From a channel to a wing</h2>
+          <a class="paper-link" href="https://arxiv.org/abs/2604.09434">Preprint <span aria-hidden="true">↗</span></a>
+        </div>
+        <a class="figure-link" href="assets/channel-to-wing.webp" aria-label="Enlarge the channel-to-wing simulation figure">
+          <img src="assets/channel-to-wing.webp" width="1700" height="937" alt="Near-wall turbulent structures over a NACA4412 wing and in a channel matched to a marked patch on the wing.">
         </a>
-        <figcaption><strong>From a channel to a wing</strong>Near-wall turbulence in the two simulations. <a href="https://arxiv.org/abs/2604.09434">Wang et al., 2026</a></figcaption>
-      </figure>
-    </div>
-    <section id="research" class="section wrap">
-      <h2>Research</h2>
-      <div class="research-copy">
-        <article>
-          <h3>Can a controller trained in a channel reduce drag on a wing?</h3>
-          <p>Training a reinforcement learning controller directly on a wing requires many expensive flow simulations. We trained controllers in smaller channels chosen to reproduce the boundary layer at different locations along the wing. When applied to the NACA4412 without further training, the controllers reduced drag.</p>
-          <a class="text-link" href="https://arxiv.org/abs/2604.09434">Read the preprint <span aria-hidden="true">↗</span></a>
+      </aside>
+    </section>
+    <section id="research" class="research" aria-labelledby="research-heading">
+      <div class="wrap">
+        <h2 class="section-title" id="research-heading">Research</h2>
+        <article class="feature">
+          <div class="feature-copy">
+            <p class="venue">Nature · 2026</p>
+            <h3>HydroGym</h3>
+            <p>Does a flow-control strategy still work when the geometry or speed changes? We built HydroGym so researchers can test that question across more than 60 validated simulations, from laminar wakes to turbulent wing boundary layers.</p>
+            <a class="action" href="https://doi.org/10.1038/s41586-026-10917-6">Read the Nature paper <span aria-hidden="true">↗</span></a>
+          </div>
+          <a class="feature-figure" href="assets/hydrogym-environments.webp" aria-label="Enlarge the HydroGym environments figure">
+            <img loading="lazy" src="assets/hydrogym-environments.webp" width="1779" height="1480" alt="HydroGym’s control loop and benchmark environments, including channel, cylinder, cavity and wing flows, arranged by flow complexity.">
+          </a>
         </article>
-        <article>
-          <h3>HydroGym</h3>
-          <p>How well does a flow-control strategy carry over to a new geometry or flow speed? We developed HydroGym so researchers can compare reinforcement learning algorithms across more than 60 validated flow simulations, from laminar cylinder wakes to turbulent wing boundary layers.</p>
-          <a class="text-link" href="https://doi.org/10.1038/s41586-026-10917-6">Read the Nature paper <span aria-hidden="true">↗</span></a>
-        </article>
-        <article>
-          <h3>Controlling the flow around vehicles</h3>
-          <p>At the GM Technical Center, I’ve explored how reinforcement learning can guide active flow control to reduce vehicle drag. This work extends my interest in turbulence control to the separated wake behind a vehicle.</p>
-        </article>
+        <div class="projects">
+          <article>
+            <h3>Zero-shot wing control</h3>
+            <p>Training a controller directly on a wing requires many expensive simulations. We trained controllers in smaller channels matched to different parts of a wing’s boundary layer. On the NACA4412, they reduced drag without further training.</p>
+            <a class="text-link" href="https://arxiv.org/abs/2604.09434">Read the preprint <span aria-hidden="true">↗</span></a>
+          </article>
+          <article>
+            <h3>Reduced-order modelling</h3>
+            <p>How much of a turbulent wake can ten modes describe? In my work on a wall-mounted square cylinder, we used a β-variational autoencoder to compress the velocity fields into ten modes and a transformer to predict how they evolve. In a companion study, we tested this approach on flows with periodic and chaotic dynamics.</p>
+            <div class="study-links">
+              <a class="text-link" href="https://doi.org/10.1016/j.ijheatfluidflow.2023.109254">Turbulent wake study <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="https://doi.org/10.1038/s41467-024-45578-4">Periodic and chaotic flows <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article>
+            <h3>Vehicle wakes</h3>
+            <p>At the GM Technical Center, I’ve explored how reinforcement learning can guide active flow control to reduce vehicle drag. I’m interested in how a controller can influence the separated wake behind a vehicle.</p>
+          </article>
+        </div>
       </div>
     </section>
     <section id="publications" class="section wrap">
       <div class="section-heading">
-        <h2>Selected publications</h2>
+        <h2 class="section-title">Selected publications</h2>
         <a class="subtle-link" href="https://orcid.org/0009-0009-9964-7595">All works on ORCID <span aria-hidden="true">↗</span></a>
       </div>
       <ol class="papers">
@@ -110,6 +131,10 @@
         <p>Department of Aerospace Engineering<br>University of Michigan · Ann Arbor</p>
       </div>
     </div>
+    <details class="credits wrap">
+      <summary>Figure credits</summary>
+      <p>Channel and wing figure from <a href="https://arxiv.org/abs/2604.09434">Wang et al. (2026)</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. HydroGym figure from <a href="https://doi.org/10.1038/s41586-026-10917-6">Lagemann et al., Nature (2026)</a>, <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>. Figures formatted for the web.</p>
+    </details>
   </footer>
 </body>
 </html>
